@@ -8,6 +8,9 @@ import tw.core.exception.OutOfGuessCountException;
 import tw.core.generator.AnswerGenerator;
 import tw.core.model.GuessResult;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -69,5 +72,18 @@ public class GameTest {
         }
     }
 
-
+    @Test
+    public void should_have_guessHistory_correct() throws Exception {
+        GuessResult guessResult1 = new GuessResult("0A4B", Answer.createAnswer("4 3 2 1"));
+        GuessResult guessResult2 = new GuessResult("4A0B", actualAnswer);
+        List<GuessResult> guessResults = new ArrayList();
+        guessResults.add(guessResult1);
+        guessResults.add(guessResult2);
+        game.guess(Answer.createAnswer("4 3 2 1"));
+        game.guess(Answer.createAnswer("1 2 3 4"));
+        assertThat(game.guessHistory().get(0).getResult(),
+                is(guessResult1.getResult()));
+        assertThat(game.guessHistory().get(1).getResult(),
+                is(guessResult2.getResult()));
+    }
 }
