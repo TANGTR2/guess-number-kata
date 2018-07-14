@@ -369,7 +369,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="289" />
     <option name="y" value="36" />
     <option name="width" value="1400" />
@@ -468,7 +468,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AnswerTest">
+  <component name="RunManager" selected="JUnit.GameTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -558,7 +558,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="AnswerTest.should_not_get_answer_format_sucess_when_given_a_validateList_short" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd-java-base_test" />
       <extension name="coverage">
         <pattern>
@@ -569,9 +569,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="tw.core" />
-      <option name="MAIN_CLASS_NAME" value="tw.core.AnswerTest" />
-      <option name="METHOD_NAME" value="should_not_get_answer_format_sucess_when_given_a_validateList_short" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="tw.core.GameTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -621,18 +621,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.AnswerTest.should_get_answer_format_sucess_when_given_a_validateList" />
-      <item itemvalue="JUnit.AnswerTest.should_not_get_answer_format_sucess_when_given_a_validateList_short" />
       <item itemvalue="JUnit.AnswerTest.should_not_get_answer_format_sucess_when_given_a_not_validateList" />
       <item itemvalue="JUnit.AnswerTest" />
       <item itemvalue="JUnit.All in tdd-java-base_test" />
+      <item itemvalue="JUnit.GameTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameTest" />
         <item itemvalue="JUnit.AnswerTest" />
         <item itemvalue="JUnit.All in tdd-java-base_test" />
         <item itemvalue="JUnit.AnswerTest.should_get_answer_format_sucess_when_given_a_validateList" />
         <item itemvalue="JUnit.AnswerTest.should_not_get_answer_format_sucess_when_given_a_not_validateList" />
-        <item itemvalue="JUnit.AnswerTest.should_not_get_answer_format_sucess_when_given_a_validateList_short" />
       </list>
     </recent_temporary>
   </component>
