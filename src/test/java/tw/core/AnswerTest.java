@@ -88,4 +88,9 @@ public class AnswerTest {
         //then
         assertThat(record.getValue(), is("0A4B"));
     }
+
+    @Test
+    public void should_use_toString(){
+        actualAnswer.toString();
+    }
 }
