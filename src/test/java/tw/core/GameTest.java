@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import tw.core.exception.OutOfGuessCountException;
 import tw.core.generator.AnswerGenerator;
+import tw.core.generator.RandomIntGenerator;
 import tw.core.model.GuessResult;
 
 import java.util.ArrayList;
@@ -42,8 +43,19 @@ public class GameTest {
 
     }
 
+
+    @Test
+    public void should_get_the_success_status_when_guess_input_is_not_correct_and_not_last_one() throws Exception {
+        AnswerGenerator answerGenerator = new AnswerGenerator(new RandomIntGenerator());
+        answerGenerator.generate();
+        GuessResult guess = game.guess(Answer.createAnswer("1 2 3 4"));
+        assertThat(game.checkStatus(), is("success"));
+    }
+
     @Test
     public void should_get_the_continue_status_when_guess_input_is_not_correct_and_not_last_one() throws Exception {
+        AnswerGenerator answerGenerator = new AnswerGenerator(new RandomIntGenerator());
+        answerGenerator.generate();
         GuessResult guess = game.guess(Answer.createAnswer("1 2 4 3"));
         assertThat(game.checkStatus(), is("continue"));
     }
@@ -85,5 +97,9 @@ public class GameTest {
                 is(guessResult1.getResult()));
         assertThat(game.guessHistory().get(1).getResult(),
                 is(guessResult2.getResult()));
+    }
+    @Test
+    public void should_checkCoutinue(){
+        game.checkCoutinue();
     }
 }
